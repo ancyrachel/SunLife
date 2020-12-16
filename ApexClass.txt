@@ -1,6 +1,6 @@
 public with sharing class AccountData {
     @AuraEnabled(cacheable=true)
     public static List<Account> getAccounts(String Industry) {
-        return [SELECT Id, Name ,Owner, Phone, website, revenue from Account where Inductry = :Industry]; 
+        return [SELECT Id, Name ,Owner, Phone, website, revenue from Account where Industry = :Industry]; 
     }
 }
